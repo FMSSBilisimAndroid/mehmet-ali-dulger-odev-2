@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SingUpActivity">
+
+        <ImageView
+            android:id="@+id/pinkEllipseImageView"
+            android:layout_width="434dp"
+            android:layout_height="660dp"
+            android:layout_marginBottom="56dp"
+            android:contentDescription="@string/background_image"
+            android:outlineAmbientShadowColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_union_ellipse_pink" />
+
+        <Button
+            android:id="@+id/singUpButton"
+            style="@style/ButtonStyle"
+            android:layout_width="229dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="99dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="86dp"
+            android:text="@string/sing_up"
+            android:textAllCaps="false"
+            android:textSize="36sp"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/singUpGreyEllipseImageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/backspace_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ellipse_grey"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/backspaceImageView"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/singUpGreyEllipseImageButton"
+            app:layout_constraintEnd_toEndOf="@+id/singUpGreyEllipseImageButton"
+            app:layout_constraintStart_toStartOf="@+id/singUpGreyEllipseImageButton"
+            app:layout_constraintTop_toTopOf="@+id/singUpGreyEllipseImageButton"
+            app:srcCompat="@drawable/ic_vector__"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/backspace_icon" />
+
+        <TextView
+            android:id="@+id/createAccountTextView"
+            style="@style/titleTextView"
+            android:layout_width="241dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="162dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/create_account"
+            android:textFontWeight="700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/singUpGreyEllipseImageButton" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/singUpEmailTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/createAccountTextView"
+            tools:layout_editor_absoluteX="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/singUpEmailEditText"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/enter_email_id"
+                android:textColor="#6B6B6B"
+                android:textColorHint="#6B6B6B" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/singUpCreateUsernameTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/singUpEmailTextInputLayout"
+            tools:layout_editor_absoluteX="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/singUpCreateUsernameEditText"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/create_username"
+                android:textColor="#6B6B6B"
+                android:textColorHint="#6B6B6B" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/singUpCreatePasswordTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:errorEnabled="true"
+            app:endIconMode="password_toggle"
+            app:layout_constraintTop_toBottomOf="@+id/singUpCreateUsernameTextInputLayout"
+            tools:layout_editor_absoluteX="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/singUpCreatePasswordEditText"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/create_password"
+                android:inputType="textPassword"
+                android:textColor="#6B6B6B"
+                android:textColorHint="#6B6B6B" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
